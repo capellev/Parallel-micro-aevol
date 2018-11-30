@@ -54,4 +54,4 @@ target_compile_definitions(sfmt
 # ============================================================================
 # Use C++11
 # ============================================================================
-target_compile_options(sfmt PRIVATE "-std=c++14")
+# target_compile_options(sfmt PRIVATE "-std=c++14")
