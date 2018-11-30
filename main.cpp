@@ -29,6 +29,7 @@
 #include <iostream>
 #include <getopt.h>
 #include <cstring>
+#include <omp.h>
 
 #include "ExpManager.h"
 
