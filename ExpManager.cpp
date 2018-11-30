@@ -406,6 +406,7 @@ void ExpManager::run_a_step(double w_max, double selection_pressure, bool first_
         auto duration_selection = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
 
         t1 = high_resolution_clock::now();
+        #pragma omp parallel for shared(nb_indivs_)
         for (int indiv_id = 0; indiv_id < nb_indivs_; indiv_id++) {
             do_mutation(indiv_id);
         }
