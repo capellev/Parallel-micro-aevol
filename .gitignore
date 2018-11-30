@@ -1,5 +1,7 @@
 CMakeCache.txt
 CMakeFiles/
+SFMT-src-1.4/CMakeCache.txt
+SFMT-src-1.4/CMakeFiles/
 SFMT-src-1.4/CMakeFiles/sfmt.dir/SFMT.o
 SFMT-src-1.4/CMakeFiles/sfmt.dir/jump/
 SFMT-src-1.4/libsfmt.a
@@ -20,4 +22,5 @@ SFMT-src-1.4/CMakeFiles/sfmt.dir/flags.make
 SFMT-src-1.4/CMakeFiles/sfmt.dir/progress.make
 SFMT-src-1.4/Makefile
 SFMT-src-1.4/cmake_install.cmake
-
+SFMT-src-1.4/CMakeFiles/sfmt.dir/depend.make
+SFMT-src-1.4/CMakeFiles/sfmt.dir/link.txt
