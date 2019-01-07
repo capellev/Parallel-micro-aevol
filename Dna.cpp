@@ -50,7 +50,28 @@ void Dna::do_switch(int pos) {
 
 
 int Dna::promoter_at(int pos) {
-  int prom_dist[22];
+
+  int diff = 0;
+  int motif_id = 0;
+
+  while (motif_id < 22 && diff <= 4){
+
+    diff += PROM_SEQ[motif_id] ==
+        seq_[
+            pos + motif_id >= seq_.size() ? pos +
+                                            motif_id -
+                                            seq_.size()
+                                          : pos +
+                                            motif_id]
+        ? 0
+        : 1;
+
+    motif_id++;
+  }
+
+  return diff;
+
+  /*int prom_dist[22];
 
   for (int motif_id = 0; motif_id < 22; motif_id++) {
     // Searching for the promoter
@@ -92,11 +113,33 @@ int Dna::promoter_at(int pos) {
                   prom_dist[20] +
                   prom_dist[21];
 
-  return dist_lead;
+  return dist_lead;*/
 }
 
 int Dna::terminator_at(int pos) {
-  int term_dist[4];
+
+  int diff = 0;
+  int motif_id = 0;
+
+  while (motif_id < 4 && diff != -1) {
+    diff = seq_[
+            pos + motif_id >= seq_.size() ? pos +
+                                            motif_id -
+                                            seq_.size() :
+            pos + motif_id] !=
+        seq_[
+            pos - motif_id + 10 >= seq_.size() ?
+            pos - motif_id + 10 - seq_.size() :
+            pos -
+            motif_id +
+            10] ? diff + 1
+                : -1;
+    motif_id++;
+  }
+
+  return diff;
+
+  /*int term_dist[4];
   for (int motif_id = 0; motif_id < 4; motif_id++) {
 
     // Search for the terminators
@@ -119,7 +162,7 @@ int Dna::terminator_at(int pos) {
                        term_dist[2] +
                        term_dist[3];
 
-  return dist_term_lead;
+  return dist_term_lead;*/
 }
 
 bool Dna::shine_dal_start(int pos) {
