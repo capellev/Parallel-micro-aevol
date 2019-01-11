@@ -41,6 +41,8 @@ class Dna {
   void save(gzFile backup_file);
   void load(gzFile backup_file);
 
+  void createSeqMod();
+
   void set(int pos, char c);
 
   void do_switch(int pos);
@@ -56,4 +58,6 @@ class Dna {
   int codon_at(int pos);
 
   std::vector<char> seq_;
+
+  std::vector<char> seqMod_;
 };
