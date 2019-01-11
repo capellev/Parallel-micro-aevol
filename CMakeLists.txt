@@ -32,7 +32,7 @@ endif()
 add_executable(pdc_mini_aevol main.cpp )
 #cuda_add_executable(pdc_mini_aevol_gpu main.cpp ${cuda_aevol})
 # nvToolsExt for enhanced profiling (ad-hoc chunks)
-target_link_libraries(pdc_mini_aevol sfmt ${ZLIB_LIBRARIES} mini_aevol_gpu)
+target_link_libraries(pdc_mini_aevol sfmt ${ZLIB_LIBRARIES} mini_aevol_gpu OpenMP::OpenMP_CXX)
 
 #target_link_libraries(pdc_mini_aevol_gpu PUBLIC mini_aevol_gpu)
 
