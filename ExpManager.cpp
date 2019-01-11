@@ -358,8 +358,8 @@ void ExpManager::do_mutation(int indiv_id) {
                 next_generation_reproducer_[indiv_id];
 
         internal_organisms_[indiv_id]->apply_mutations();
-        internal_organisms_[indiv_id]->remove_all_promoters();
-        internal_organisms_[indiv_id]->locate_promoters();
+        //internal_organisms_[indiv_id]->remove_all_promoters();
+        //internal_organisms_[indiv_id]->locate_promoters();
     } else {
         int parent_id = next_generation_reproducer_[indiv_id];
 
