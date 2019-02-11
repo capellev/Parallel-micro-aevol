@@ -6,6 +6,15 @@ DO NOT USE IT TO SIMULATE BIOLOGICAL RESULTS ! See [http://www.aevol.fr](http://
 
 It must be used only to test HPC optimization of the code (parallel, vector, porting to new architecture...).
 
+## Branch description
+
+* **master** - Initial work
+* **modulo** - Simulate circular DNA to remove modulo
+* **openmp** - Add parallelization with OpenMP
+* **optiAlgo** - openmp + Modification to Promoter and Terminator Algorithm
+* **diffMutation** - optiAlgo + working on diff after mutation
+* **allOpti** - modulo + diffMutation
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -57,6 +66,9 @@ More details about the model and its implementation are given at :
 ## Authors
 
 * **Jonathan Rouzaud-Cornabas** - *Initial work*
+* **Victor Capelle**
+* **Thomas Schrambach**
+* **Tim Gonnet**
 
 For the authors of Aevol software, see [http://www.aevol.fr](http://www.aevol.fr)
 
